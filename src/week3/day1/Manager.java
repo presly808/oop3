@@ -18,6 +18,14 @@ public class Manager extends Employee {
 	}
 	
 	public void addEmployee(Employee empl){
+		if(empl instanceof Tester){
+			System.out.println("Add tester");
+		}
+		if(empl instanceof Manager){
+			System.out.println("Add manager");
+		}
+		empl.sayHello();
+		
 		team[index] = empl;
 		index++;
 	}
@@ -30,6 +38,19 @@ public class Manager extends Employee {
 	
 	public void letTestersWork(){
 		
+	}
+	
+	public void work(){
+		
+	}
+	
+	public void work(int hours){
+		
+	}
+	
+	public void sayHello(){
+		System.out.println("Im manager");
+		System.out.println(getName() + " " + getAge());
 	}
 	
 }

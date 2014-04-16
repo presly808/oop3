@@ -17,4 +17,12 @@ public class Tester extends Employee {
 		sayHello();
 	}
 	
+	public boolean equals(Object tester){
+		Tester other = (Tester) tester;
+		if(this.getName().equals(other.getName())){
+			return true;
+		}
+		return false;
+	}
+	
 }

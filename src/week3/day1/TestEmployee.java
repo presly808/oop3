@@ -8,6 +8,10 @@ public class TestEmployee {
 		Tester t3 = new Tester("Bogdan", 30, 1500.78, "EPAM");
 		Manager m1 = new Manager("Olia", 25, 2000, "EPAM");
 		
+		t1.equals(t2);
+		m1.equals(t1);
+		
+		
 		Manager m = new Manager("Lesia", 23, 2000, "Infopulse");
 		m.addEmployee(t1);
 		m.addEmployee(t2);

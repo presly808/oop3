@@ -54,5 +54,33 @@ public class Employee {
 		System.out.println("I'm " + name + " age " + 
 								age +" salary " + salary);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(this == obj){
+			return true;
+		}
+		
+		if(!(obj instanceof Employee)){
+			return false;
+		}
+		
+		Employee empl = (Employee) obj;
+		if(name.equals(empl.getName()) && 
+				age == empl.getAge() && 
+				salary == empl.getSalary() && 
+				company.equals(empl.getCompany())){
+			return true;
+		}
+		
+		return false;
+	}
+
+	@Override
+	public String toString() {
+		return "name = " + name + 
+				"; age = " + age + "; salary = " + salary;
+	}
+	
 	
 }
