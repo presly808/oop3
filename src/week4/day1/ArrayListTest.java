@@ -11,6 +11,8 @@ public class ArrayListTest {
 		ArrayList<Employee> list = new ArrayList<Employee>(40);
 		list.add(new Employee("Vova", 22, 12300, "IT"));
 		list.get(0);
+		Employee em =  list.get(list.size() - 1);
+		System.out.println("test "+ em);
 		list.add(new Employee("Vova", 22, 12300, "IT"));
 		/*list.isEmpty();
 		list.trimToSize();*/
@@ -30,7 +32,7 @@ public class ArrayListTest {
 		Integer res2 = (i2 + 67) + 45;
 		// Immutable
 		
-		int parsedInt = Integer.parseInt("34wer");
+		int parsedInt = Integer.parseInt("34");
 		System.out.println(parsedInt);
 		
 	}

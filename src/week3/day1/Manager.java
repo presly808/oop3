@@ -1,6 +1,8 @@
 package week3.day1;
 
-public class Manager extends Employee {
+import week4.day1.interfaces.ManagerBehavior;
+
+public class Manager extends Employee implements ManagerBehavior {
 
 	private Employee[] team = new Employee[10]; // null
 	private int index = 0;

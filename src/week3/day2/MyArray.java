@@ -1,11 +1,13 @@
 package week3.day2;
 
 public class MyArray {
-	private Object[] mas;
+	private int[] mas;
 	
-	public MyArray(Object[] mas){
-		this.mas = mas;
+	public MyArray(int size){
+		this.mas = new int[size];
 	}
 	
-	
+	public void setMas(int[] mas){
+		this.mas = mas;
+	}
 }

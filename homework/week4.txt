@@ -1,0 +1,39 @@
+1. Повторить
+	Abstract(class, method), Interface, Enum
+	ArrayList, Comparable, Arrays.sort, Collections.sort
+	Exceptions, Streams
+	
+2. Доделать предыдущее задание week3
+
+3. Добавить в программу для управления сервисным центром следующие 
+	- сохранять все данные перед выходом из программы
+	- загружать все данные при запуске программы
+	
+	- class CompanySaver
+	
+			- Сохранить всех сотрудников 
+			
+			пример содержимого в файле(сохранять состояние объекта)
+			1.name=Adam,age=15,salary=1500,position=Director...
+			2.name=Lamber,age=25,salary=2000,position=Admin...
+			3.name=Jerar,age=32,salary=4000,position=Repairer...
+			...
+			
+			- Сохранить все товары(по аналогии с сотрудниками)
+			
+			- Сохранить всех клиентов
+			
+	- class CompanyLoader	
+		
+			- Загрузить всех сотрудников 
+			
+			- Загрузить всех клиентов
+			
+			- Загрузить все товары
+		
+4. Разобраться с стандартной сериализацией
+	http://www.tutorialspoint.com/java/java_serialization.htm
+	http://www.vogella.com/tutorials/JavaSerialization/article.html
+	
+	Сделать сохранение данных программы с помощью стандартной сериализации
+	
