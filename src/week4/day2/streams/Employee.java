@@ -1,9 +1,13 @@
 package week4.day2.streams;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
 	
 	private String name;
 	private int age;
+	private transient String pass;// null
+	private Company com;
 	
 	public Employee(String name, int age) {
 		super();
@@ -25,6 +29,24 @@ public class Employee {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public Company getCom() {
+		return com;
+	}
+
+	public void setCom(Company com) {
+		this.com = com;
 	}
 
 	@Override
