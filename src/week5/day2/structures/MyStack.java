@@ -1,23 +1,24 @@
 package week5.day2.structures;
 
+import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-public class MyStack implements IStack {
+public class MyStack<T> implements IStack<T> {
 
-	private Object[] mas;
+	private T[] mas;
 	private int index = 0;
 	
 	public MyStack(){
-		mas = new Object[10];
+		mas = (T[]) new Object[10];
 	}
 	
 	public MyStack(int size){
-		mas = new Object[size];
+		mas = (T[]) new Object[size];
 	}
 	
 	
 	@Override
-	public void push(Object o) {
+	public void push(T o) {
 		if(index < mas.length)
 			mas[index++] = o;
 		else 
@@ -25,7 +26,7 @@ public class MyStack implements IStack {
 	}
 
 	@Override
-	public Object pop() {
+	public T pop() {
 		if(index == 0)
 			throw new MyEmptyStackException();
 		return mas[--index];
@@ -38,6 +39,32 @@ public class MyStack implements IStack {
 			sb.append(mas[i].toString() + "\n");
 		}
 		return sb.toString();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(this == obj) {
+			return true;
+		}
+		
+		if(obj != null ? obj.getClass() != MyStack.class : true){
+			return false;
+		}
+		
+		MyStack that = (MyStack) obj;
+		
+		if(index != that.index){
+			return false;
+		} 
+		
+		for(int i = 0; i < index; i++){
+			if(!this.mas[i].equals(that.mas[i])){
+				return false;
+			}	
+		}
+		
+		
+		return true;
 	}
 	
 	

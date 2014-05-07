@@ -1,9 +1,9 @@
 package week5.day2.structures;
 
-public interface IStack {
+public interface IStack<T> {
 	
-	void push(Object o);
+	void push(T o);
 	
-	Object pop();
+	T pop();
 	
 }

@@ -5,7 +5,7 @@ import week4.day2.streams.Employee;
 public class TestStack {
 	
 	public static void main(String[] args) {
-		MyStack stack = new MyStack();
+		MyStack<Employee> stack = new MyStack<Employee>();
 		stack.push(new Employee("Vova", 23));
 		stack.push(new Employee("Anton", 30));
 		stack.push(new Employee("Kolia", 40));
