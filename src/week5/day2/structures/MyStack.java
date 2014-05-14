@@ -2,6 +2,7 @@ package week5.day2.structures;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;
+import java.util.Iterator;
 
 public class MyStack<T> implements IStack<T> {
 
@@ -66,6 +67,8 @@ public class MyStack<T> implements IStack<T> {
 		
 		return true;
 	}
+	
+	
 	
 	
 

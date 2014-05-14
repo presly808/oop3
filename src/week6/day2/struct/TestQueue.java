@@ -1,5 +1,7 @@
 package week6.day2.struct;
 
+import java.util.Iterator;
+
 public class TestQueue {
 
 	public static void main(String[] args) {
@@ -10,10 +12,14 @@ public class TestQueue {
 		
 		queueArr.enqueue(45);
 		
-		System.out.println(queueArr.dequeue());
-		System.out.println(queueArr.dequeue());
-		System.out.println(queueArr.dequeue());
-
+		//Iterator<Integer> iter =  queueArr.iterator();
+		//while(iter.hasNext()){
+			//System.out.println(iter.next());
+		//}
+		
+		for(Integer i : queueArr){
+			System.out.println(i);
+		}
 	}
 
 }

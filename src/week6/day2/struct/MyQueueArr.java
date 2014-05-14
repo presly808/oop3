@@ -1,8 +1,9 @@
 package week6.day2.struct;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class MyQueueArr<T> implements IQueue<T>{
+public class MyQueueArr<T> implements IQueue<T>, Iterable<T> {
 
 	private T[] mas = (T[]) new Object[10];
 	private int head;
@@ -26,5 +27,33 @@ public class MyQueueArr<T> implements IQueue<T>{
 	}
 	
 	
+	
+	@Override
+	public Iterator<T> iterator() {
+		return new QueueIterator();
+	}
+
+
+
+	private class QueueIterator implements Iterator<T> {
+		
+		private int iterHead = head;
+		
+		@Override
+		public boolean hasNext() {
+			return iterHead < tail;
+		}
+
+		@Override
+		public T next() {
+			return mas[iterHead++];
+		}
+
+		@Override
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
+		
+	}
 	
 }
