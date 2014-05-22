@@ -16,6 +16,10 @@ public class TestMyLinkedStack {
 		stack.push("line7");
 		stack.push("line8");
 		
+		System.out.println("Before");
+		stack.show();
+		System.out.println("After");
+		
 		for(Object o : stack){ // use iterator 
 			System.out.println(o);
 		}

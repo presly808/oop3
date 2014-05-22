@@ -26,6 +26,19 @@ public class MyLinkedStack implements Iterable {
 		return o;
 	}
 	
+	public void show(){
+		show(top);
+	}
+	
+	private void show(Node node){
+		if(node == null){
+			return;
+		}
+		
+		System.out.println(node.value);
+		show(node.next);
+	}
+	
 	public void showAll(){
 		for(Node i = top; i.next != null; i = i.next){
 			System.out.println(i.value);
